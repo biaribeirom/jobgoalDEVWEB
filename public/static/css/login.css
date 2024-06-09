@@ -118,23 +118,23 @@ label {
     margin: 0;
 }
 
-@media screen and (min-width: 1024px){
-    .login{
+@media screen and (min-width: 1024px) {
+    .login {
         padding: 40px;
         width: 50%;
         max-width: 600px;
         margin-top: 30px;
     }
 
-    .logo__site{
-        width: 50px;
+    .logo__site {
+        width: 30px; /* Diminuir o tamanho do logo */
     }
 
-    .logo__google{
+    .logo__google {
         width: 30px;
     }
 
-    .google{
+    .google {
         padding: 15px 20px;
         font-size: 18px;
     }
@@ -144,7 +144,7 @@ label {
         margin-left: 0;
     }
 
-    input[type="email"], input[type="password"]{
+    input[type="email"], input[type="password"] {
         padding: 12px;
         font-size: 16px;
     }
@@ -152,18 +152,17 @@ label {
     .mostra__senha img {
         width: 28px;
         margin-right: 10px;
-
     }
 
-    .ou, .links label{
+    .ou, .links label {
         font-size: 16px;
     }
     
-    .links{
+    .links {
         text-align: center;
     }
-
 }
+
 
 @media screen and (min-width: 1728px) {
     .login {
@@ -174,7 +173,7 @@ label {
     }
 
     .logo__site {
-        width: 50%; 
+        width: 30%; /* Diminuir o tamanho do logo */
     }
 
     .logo__google {
