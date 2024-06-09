@@ -1,0 +1,148 @@
+.container__terceario{
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container__oferece{
+    margin-bottom: 20px;
+}
+
+.oferece__titulo {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.oferece__texto{
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: var(--cinza);
+}
+
+.icones{
+    width: 10%;
+    margin-top: 5px;
+}
+
+.oferece__lista{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.oferece__lista li{
+    padding: 15px;
+    font-size: 12px;
+}
+
+.oferece__lista p{
+    color: var(--cinza);
+}
+
+.lista__item{
+    font-size: 16px;
+    margin-top: 3px;
+    margin-bottom: 7px;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1024px){
+   .container__terceario{
+        padding: 40px;
+        max-width: 800px;
+        margin: 0 auto;
+   } 
+
+   .oferece__lista{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .oferece__lista li{
+        width: 30%;
+        padding: 20px;
+    }
+
+    .oferece__titulo{
+        font-size: 30px;
+    }
+    
+    .lista__item{
+        font-size: 24px;
+    }
+
+    .oferece__texto{
+        font-size: 19px;
+    }
+
+    li p{
+        font-size: 18px;
+    }
+
+    .botao{
+        margin-top: 40px;
+    }
+
+    .icones{
+        width: 40px; 
+    }
+        
+}
+
+@media screen and (min-width: 1728px){
+    .container__terceario{
+         padding: 60px;
+         max-width: 1200px;
+         margin: 0 auto;
+    } 
+ 
+    .oferece__lista{
+         flex-direction: row;
+         justify-content: space-around;
+         gap: 40px;
+     }
+ 
+     .oferece__lista li{
+         width: 30%;
+         padding: 30px;
+     }
+ 
+     .oferece__titulo{
+         font-size: 47px;
+     }
+     
+     .lista__item{
+         font-size: 35px;
+     }
+ 
+     .oferece__texto{
+         font-size: 30px;
+     }
+ 
+     li p{
+         font-size: 18px;
+     }
+ 
+     .botao{
+         margin-top: 40px;
+     }
+ 
+     .icones{
+         width: 80px; 
+     }
+         
+ }
+ 
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+
+.container__secundario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.container__descricao {
+    width: 50%;
+}
+
+.descricao__texto{
+    color: var(--cinza);
+}
+
+.container__titulo {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.container__descricao p{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.botao {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--azul);
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    margin-top: 12px;
+}
+
+.botao:hover{
+    background-color: var(--azul-claro);
+}
+
+.secundario__imagem {
+    width: 40%;
+    height: auto;
+    margin-top: 20px;
+
+}
+
+.container__secundario.invertido{
+    flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 1024px){
+
+    .container__secundario{
+        flex-direction: row;
+        align-items: center;
+        text-align: left; 
+        justify-content: space-between; 
+        gap: 50px;
+        padding: 20px;
+    }
+
+    .container__descricao{
+        width: 50%;
+    }
+
+    .secundario__imagem{
+        width: 35%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .container__titulo{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .container__descricao p{
+        font-size: 21px;
+        margin-bottom: 40px; 
+    }
+
+    .botao {
+        padding: 15px;
+        font-size: 18px;
+        margin-top: 0px;
+    }
+
+    .container__secundario.invertido{
+        flex-direction: row-reverse;
+    }
+
+}
+
+@media screen and (min-width: 1728px){
+    .container__secundario{
+        margin: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        gap: 100px;
+    }
+
+    .container__descricao{
+        width: 60%;
+        padding: 0 2%;
+    }
+
+    .container__titulo{
+        font-size: 47px;
+        margin-bottom: 20px;
+    }
+
+    .container__descricao p{
+        font-size: 30px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .botao{
+        padding: 18px 36px;
+        font-size: 29px;
+        
+    }
+
+    .secundario__imagem{
+        width: 35%;
+        height: auto;
+    }
+
+    .container__secundario.invertido{
+        flex-direction: row-reverse;
+    }
+
+}
+

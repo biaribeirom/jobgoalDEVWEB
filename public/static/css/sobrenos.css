@@ -1,0 +1,40 @@
+html, body{
+    font-family: var(--fonte);
+    color: var(--cinza);
+}
+
+.titulo__sobre-nos {
+    text-transform: uppercase;
+    color: var(--azul-escuro);
+    font-weight: 700;
+}
+
+.paragrafo__sobre-nos {
+    text-transform: none;
+    color: var(--cinza);
+    font-weight: 300;
+    text-align: center;
+    font-size: 21px;
+}
+
+.btn-primary {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+.btn-primary:hover {
+    background-color: var(--azul-claro);
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.img-fluid{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 0.25rem;
+    display: block;
+    max-width: 0 auto;
+}

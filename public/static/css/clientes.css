@@ -1,0 +1,151 @@
+.container__cinco{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container__clientes__introducao{
+    margin-bottom: 20px;
+}
+
+.container__clientes__depoimentos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__clientes__titulo{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 16px;
+} 
+
+
+.container__clientes__descricao{
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: var(--cinza);
+}
+
+.container__clientes__depoimento{
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--cinza);
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.container__clientes__depoimento img:first-of-type{
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.clientes__depoimento__descricao{
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 600;
+
+}
+
+.container__clientes__depoimento img:last-of-type{
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.clientes__nome{
+    font-size: 12px;
+
+}
+
+@media screen and (min-width: 1024px){
+    .container__cinco{
+        padding: 40px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .container__clientes__depoimentos{
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .container__clientes__titulo{
+        font-size: 27px;
+    }
+
+    .container__clientes__depoimento{
+        flex-basis: 40%;
+    }
+
+    .container__clientes__depoimento img:first-of-type{
+        width: 50%;
+        margin-bottom: 5px;
+    }
+
+    .container__clientes__descricao{
+        font-size: 17px;
+        margin-bottom: 20px;
+
+    }
+
+    .clientes__depoimento__descricao{
+        font-size: 17px;
+    }
+
+    .container__clientes__depoimento img:last-of-type{
+        width: 70px;
+        height: auto;
+    }
+
+    .clientes__nome{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .container__cinco{
+        padding: 60px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .container__clientes__depoimentos{
+        justify-content: space-evenly;
+    }
+
+    .container__clientes__depoimento{
+        width: 40%;
+        padding: 40px;
+        margin: 0 20px;
+    }
+
+    .container__clientes__depoimento img:first-of-type{
+        width: 120px;
+    }
+
+    .clientes__depoimento__descricao{
+        font-size: 28px;
+    }
+
+    .container__clientes__depoimento img:last-of-type{
+        width: 80px;
+        height: auto;
+    }
+
+    .clientes__nome{
+        font-size: 24px;
+    }
+
+    .container__clientes__titulo{
+        font-size: 47px;
+    }
+
+    .container__clientes__descricao{
+        font-size: 30px;
+    }
+}
+

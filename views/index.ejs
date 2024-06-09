@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobGoal</title>
+    <link rel="shortcut icon" href="/static/imagens/icone.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <%- include('partials/navbar') %>
+    </header>
+
+    <section class="banner">
+        <h2 class="banner__titulo">Trace seu caminho ao sucesso:</h2>
+        <p class="banner__texto">Planeje hoje e conquiste o futuro que você deseja!</p>
+        <a href="/sobrenos" class="banner__botao">Sobre Nós</a>
+        <a href="/faleconosco" class="banner__botao">Fale Conosco</a>
+    </section>
+
+    <section class="container__secundario">
+        <div class="container__descricao">
+            <h2 class="container__titulo">Defina e alcance seus objetivos de carreira</h2>
+            <p class="descricao__texto">
+                Assuma o controle do crescimento de sua carreira com nossa ferramenta de definição de metas e acompanhamento de desenvolvimento
+            </p>
+            <a href="/login" class="botao">Começar</a>
+        </div>
+        <img src="/static/imagens/foto-index.jpg" alt="nao sei" class="secundario__imagem">
+    </section>
+    <section class="container__secundario invertido">
+        <div class="container__descricao">
+            <h2 class="container__titulo">Acompanhe seus objetivos com facilidade</h2>
+            <p class="descricao__texto">
+                Nosso recurso simplifica a definição e o gerenciamento de suas metas de curto e longo prazo. mantenha-se motivado e acompanhe seu progresso sem esforço
+            </p>
+            <a href="/login" class="botao">Começar</a>
+        </div>
+        <img src="/static/imagens/imagem-index.svg" alt="nao sei" class="secundario__imagem">
+    </section>
+
+    <section class="container__terceario">
+        <div class="container__oferece">
+            <h2 class="oferece__titulo">O que o site oferece</h2>
+            <p class="oferece__texto">Nossa plataforma oferece uma maneira simples e eficaz para profissionais ambiciosos definirem e acompanharem seus objetivos de carreira. Com nossa ferramenta, você pode mapear facilmente sua trajetória profissional, desenvolver suas habilidades e se preparar para oportunidades futuras.</p>
+        </div>
+        <ul class="oferece__lista">
+            <li>
+                <img class="icones" src="/static/imagens/metas 1.png" alt="icone de metas">
+                <h3 class="lista__item">Metas</h3>
+                <p>Adicione e gerencie facilmente metas de curto e longo prazo.</p>
+            </li>
+            <li>
+                <img class="icones" src="/static/imagens/habilidades 1.png" alt="icone de habilidades">
+                <h3 class="lista__item">Habilidades</h3>
+                <p>Desenvolva e acompanhe suas habilidades de forma prática e eficiente.</p>
+            </li>
+            <li>
+                <img class="icones" src="/static/imagens/procura-de-emprego 1.png" alt="icone de oportunidades">
+                <h3 class="lista__item">Oportunidades</h3>
+                <p>Explore e aproveite oportunidades de carreira adaptadas ao seu perfil profissional.</p>
+            </li>
+        </ul>
+        <a href="/login" class="botao">Começar</a>
+    </section>
+    <section class="container__quatro">
+        <div class="container__perguntas">
+            <h2 class="perguntas__titulo titulo">Perguntas Frequentes</h2>
+            <p class="perguntas__descricao">Encontre respostas para perguntas comuns sobre nosso serviço e tome decisões informadas.</p>
+            
+            <h2 class="perguntas__titulo">Como funciona?</h2>
+            <p class="perguntas__descricao">Nosso serviço permite que você defina e gerencie metas de curto e longo prazo. Você pode acompanhar seu progresso, desenvolver suas habilidades e se preparar para oportunidades futuras.</p>
+           
+            <h2 class="perguntas__titulo">Por que nos escolher?</h2>
+            <p class="perguntas__descricao">Oferecemos uma aplicação web amigável que ajuda você a mapear sua carreira e tomar decisões informadas sobre seu futuro profissional.</p>
+        
+            <h2 class="perguntas__titulo">É gratuito?</h2>
+            <p class="perguntas__descricao">Sim, nosso serviço é gratuito para usar.</p>
+        
+            <h2 class="perguntas__titulo">Como posso me inscrever?</h2>
+            <p class="perguntas__descricao">Inscrever-se é fácil! Simplesmente visite nosso site e siga o processo de registro para criar sua conta.</p>
+        
+            <h2 class="perguntas__titulo">Ainda tem perguntas?</h2>
+            <p class="perguntas__descricao">Entre em contato com o nosso time que iremos te ajudar!</p>
+            
+            <a href="/faleconosco" class="botao">Contato</a>
+        </div>
+    </section>
+
+    <section class="container__cinco">
+        <div class="container__clientes__introducao">
+            <h2 class="container__clientes__titulo">Depoimento de Clientes</h2>
+            <p class="container__clientes__descricao">Ouça profissionais que alcançaram sucesso na carreira</p>
+        </div>
+        <div class="container__clientes__depoimentos">
+            <div class="container__clientes__depoimento">
+                <img src="/static/imagens/estrelinhas.png" alt="cinco estrelas">
+                <p class="clientes__depoimento__descricao">“O site me ajudou a organizar claramente minhas metas e acompanhar meu processo. Um divisor de águas!”</p>
+                <img src="/static/imagens/homem.png" alt="homem">
+                <p class="clientes__nome">John Don</p>
+                <p class="clientes__nome">Gerente Sênior, Microsoft</p>
+            </div>
+
+            <div class="container__clientes__depoimento">
+                <img src="/static/imagens/estrelinhas.png" alt="cinco estrelas">
+                <p class="clientes__depoimento__descricao">“Eu amo como esse site me mantém motivada e focada nos meus objetivos de carreira à longo prazo!”</p>
+                <img src="/static/imagens/mulher.png" alt="mulher">
+                <p class="clientes__nome">Julia Smith</p>
+                <p class="clientes__nome">Diretora de Marketing, Amazon</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Impulsione sua carreira: leituras essenciais para todo profissional ambicioso.</h2>
+        <div class="carrossel__container">
+            <div class="swiper">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/static/imagens/mindset_livro 1.png" alt="livro sobre mindset"></div>
+                    <div class="swiper-slide"><img src="/static/imagens/opoderdohabito 1.png" alt="Livro o poder do hábito"></div>
+                    <div class="swiper-slide"><img src="/static/imagens/principios_livro 1.png" alt="Livro o lider servidor"></div>
+                    <div class="swiper-slide"><img src="/static/imagens/principios_livro 2.png" alt="Livro principios"></div>
+                    <div class="swiper-slide"><img src="/static/imagens/sejaegoistacomsuacarreira_livro 1.png" alt="livro Seja egoista com sua carreira"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
+</body>
+</html>

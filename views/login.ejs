@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="static/imagens/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/login.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<header class="cabecalho">
+    <%- include('partials/navbar') %>
+</header>
+<style>
+        .opcoes__item{
+        font-weight: 400;
+    }
+</style>
+<body>
+    <div class="login">
+        <img src="static/imagens/logo.png" alt="logo JobGoal" class="logo__site">
+        <button onclick="window.location.href='https:/accounts.google.com/signin';" class="google">
+            <img src="static/imagens/pesquisa.png" alt="logo do Google" class="logo__google">
+            Fazer login com o Google
+        </button>
+        <p class="ou">ou</p>
+        <form action="/submit" method="post" class="formulario" onsubmit="return validaFormulario()">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Insira seu E-mail" required>
+
+            <label for="password">Senha</label><br>
+            <input type="password" id="senha" name="senha" class="input-senha" placeholder="Insira sua senha" required>
+            <span class="mostra__senha" onclick="mostraSenha();">
+                <img src="static/imagens/senha.png">
+            </span>
+
+            <button type="submit" class="entrar">Entrar</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        function mostraSenha() {
+            var senhaInput = document.getElementById('senha');
+            var senhaTipo = senhaInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            senhaInput.setAttribute('type', senhaTipo);
+        }
+
+        function validaFormulario() {
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}(\.[a-zA-Z]{2})?$/;
+            var senhaRegex = /^(?=.*[A-Z])(?=.*\W).{8,}$/;
+
+            if (!emailRegex.test(email)) {
+                alert('Por favor, insira um email válido.');
+                return false;
+            }
+
+            if (!senhaRegex.test(senha)) {
+                alert('A senha deve ter pelo menos 8 caracteres, incluindo uma letra maiúscula e um caractere especial.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

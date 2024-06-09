@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard - JobGoal</title>
+    <link rel="shortcut icon" href="static/imagens/icone.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/skills/skill-2/assets/css/skill-2.css" />
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/dashboard.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <%- include('partials/navbar') %>
+    </header>
+    
+    <section class="introducao__dashboard text-center py-5">
+        <div class="container__dashboard">
+            <h1 class="titulo__dashboard">Bem-Vindo!</h1>
+            <p class="texto__dashboard">Monitore seu progresso, conquiste objetivos e amplie suas competências.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row justify-content-center mt-4 pt-3">
+                            <div class="col-xl-10">
+                                <ul class="timeline mb-0">
+                                    <li>
+                                        <div class="date bg-light">
+                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="event-content">
+                                                    <div class="timeline-date bg-primary text-center rounded float-end">
+                                                        <h3 class="text-white mb-0 fs-17">15</h3>
+                                                        <p class="mb-0 text-white-50">Mar</p>
+                                                    </div>
+                                                    <div class="timeline-text">
+                                                        <h3 class="fs-17">Concluído Curso de HTML e CSS</h3>
+                                                        <p class="mb-0 mt-2 pt-1 text-muted">Concluiu com sucesso um curso avançado de HTML e CSS, aprimorando habilidades em desenvolvimento e design web.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <div class="date bg-light">
+                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="event-content">
+                                                    <div class="timeline-date bg-primary text-center rounded float-end">
+                                                        <h3 class="text-white mb-0 fs-17">20</h3>
+                                                        <p class="mb-0 text-white-50">Abr</p>
+                                                    </div>
+                                                    <div class="timeline-text">
+                                                        <h3 class="fs-17">Iniciado Projeto em JavaScript</h3>
+                                                        <p class="mb-0 mt-2 pt-1 text-muted">Iniciou um projeto pessoal para criar uma aplicação web dinâmica e interativa usando JavaScript.</p>
+                                                        <div class="d-flex flex-wrap align-items-start event-img mt-3 gap-2">
+                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-fluid rounded" width="60">
+                                                            <img src="assets/images/small/img-5.jpg" alt="" class="img-fluid rounded" width="60">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <div class="date bg-light">
+                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="event-content">
+                                                    <div class="timeline-date bg-primary text-center rounded float-end">
+                                                        <h3 class="text-white mb-0 fs-17">10</h3>
+                                                        <p class="mb-0 text-white-50">Jun</p>
+                                                    </div>
+                                                    <div class="timeline-text">
+                                                        <h3 class="fs-17">Participou de Workshop de Desenvolvimento Web</h3>
+                                                        <p class="mb-0 mt-2 pt-1 text-muted">Participou de um workshop focado nas últimas tendências em desenvolvimento web e melhores práticas em codificação.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <div class="date bg-light">
+                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="event-content">
+                                                    <div class="timeline-date bg-primary text-center rounded float-end">
+                                                        <h3 class="text-white mb-0 fs-17">05</h3>
+                                                        <p class="mb-0 text-white-50">Jul</p>
+                                                    </div>
+                                                    <div class="timeline-text">
+                                                        <h3 class="fs-17">Aprendeu React.js</h3>
+                                                        <p class="mb-0 mt-2 pt-1 text-muted">Concluiu um curso de React.js, adquirindo conhecimento em construir interfaces de usuário dinâmicas para aplicações web.</p>
+    
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <div class="date bg-light">
+                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="event-content">
+                                                    <div class="timeline-date bg-primary text-center rounded float-end">
+                                                        <h3 class="text-white mb-0 fs-17">20</h3>
+                                                        <p class="mb-0 text-white-50">Ago</p>
+                                                    </div>
+                                                    <div class="timeline-text">
+                                                        <h3 class="fs-17">Desenvolveu Portfólio Pessoal</h3>
+    
+                                                        <p class="mb-0 mt-2 pt-1 text-muted">Criou um site de portfólio pessoal exibindo projetos e habilidades adquiridos ao longo do último ano.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <div class="date bg-light">
+                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="event-content">
+                                                    <div class="timeline-date bg-primary text-center rounded float-end">
+                                                        <h3 class="text-white mb-0 fs-17">15</h3>
+                                                        <p class="mb-0 text-white-50">Set</p>
+                                                    </div>
+                                                    <div class="timeline-text">
+                                                        <h3 class="fs-17">Aprendeu Node.js</h3>
+    
+                                                        <p class="mb-0 mt-2 pt-1 text-muted">Estudou e praticou Node.js para construir aplicações backend e aprimorar habilidades em desenvolvimento server-side.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="date bg-light">
+                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="event-content">
+                                                    <div class="timeline-date bg-primary text-center rounded float-end">
+                                                        <h3 class="text-white mb-0 fs-17">30</h3>
+                                                        <p class="mb-0 text-white-50">Nov</p>
+                                                    </div>
+                                                    <div class="timeline-text">
+                                                        <h3 class="fs-17">Concluiu Bootcamp de Desenvolvimento Full-Stack</h3>
+    
+                                                        <p class="mb-0 mt-2 pt-1 text-muted">Finalizou com sucesso um bootcamp intensivo de desenvolvimento full-stack, ganhando expertise em tecnologias frontend e backend.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="indicacoes">
+        <h2 class="texto__indicacoes">Explore nossa curadoria de cursos e recursos selecionados especialmente para fortalecer suas habilidades e acelerar seu crescimento profissional.</h2>
+        <ul class="lista__indicacoes">
+            <li class="lista__item__indicacoes">
+                <img src="/static/imagens/educacao 1.png" alt="ícone de curso" class="icones__indicacoes">
+                <h3 class="titulo__indicacoes"> Cursos Online</h3>
+                <a class="nomes__indicacoes" href="https://www.coursera.org/">Coursera</a>
+                <a class="nomes__indicacoes" href="https://www.udemy.com/">Udemy</a>
+                <a class="nomes__indicacoes" href="https://learning.linkedin.com/">LinkedIn Learning</a>
+            </li>
+            <li class="lista__item__indicacoes">
+                <img src="/static/imagens/artigo 1.png" alt="ícone de artigos" class="icones__indicacoes">
+                <h3 class="titulo__indicacoes">Artigos</h3>
+                <a class="nomes__indicacoes" href="https://medium.com/">Medium</a>
+                <a class="nomes__indicacoes" href="https://hbr.org/">Harvard Business Review</a>
+            </li>
+            <li class="lista__item__indicacoes">
+                <img src="/static/imagens/botao-play 1.png" alt="ícone de video" class="icones__indicacoes">
+                <h3 class="titulo__indicacoes"> Vídeos </h3>
+                <a class="nomes__indicacoes" href="https://www.ted.com/">TED talks</a>
+                <a class="nomes__indicacoes" href="https://pt.khanacademy.org/">Khan Academy</a>
+            </li>
+            <li class="lista__item__indicacoes">
+                <img src="/static/imagens/palestra 1.png" alt="ícone de workshops" class="icones__indicacoes">
+                <h3 class="titulo__indicacoes"> Workshops </h3>
+                <a class="nomes__indicacoes" href="https://www.ted.com/">teste</a>
+                <a class="nomes__indicacoes" href="https://www.meetup.com/pt-BR/">Meetup</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <%- include('partials/footer') %>
+    </section>
+
+    <!-- Inclua os scripts do Bootstrap -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

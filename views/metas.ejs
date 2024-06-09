@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metas</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="shortcut icon" href="/static/imagens/icone.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<style>
+    .opcoes__link {
+        text-decoration: none !important;
+        font-weight: 450 !important;
+        font-size: 18px !important;
+    }
+
+    .container__imagem__logo {
+        width: 50% !important;
+        height: auto !important;
+    }
+
+    .container__link {
+        opacity: 1;
+        background-color: var(--branco);
+        background-image: url('/public/static/imagens/usuario.png') !important;
+    }
+</style>
+<body>
+    <header class="cabecalho">
+        <%- include('partials/navbar') %>
+    </header>
+    <div class="main-content">
+        <div class="left-content">
+            <h1 class="metas__titulo ">Metas</h1>
+            <p class="metas__texto ">Definir metas claras é crucial para o sucesso na carreira, proporcionando foco, direção e um roteiro para alcançar seus objetivos profissionais. Estabelecer essas metas ajuda a monitorar o progresso, ajustar estratégias e atingir suas aspirações com eficiência.</p>
+            <div class="metas__container">
+                <img src="static/imagens/ideia (1) 1.png" alt="Ícone de Lâmpada" class="metas__icone" id="lampadaIcon">
+                <div class="tooltip" id="tooltipText">
+                    Utilize o método SMART para definir suas metas:
+                    <ul>
+                        <li><strong>Específicas:</strong> Detalhe o que você deseja alcançar.</li>
+                        <li><strong>Mensuráveis:</strong> Estabeleça como medir o progresso.</li>
+                        <li><strong>Atingíveis:</strong> Garanta que a meta seja realista.</li>
+                        <li><strong>Relevantes:</strong> Alinhe suas metas com seus objetivos maiores.</li>
+                        <li><strong>Temporais:</strong> Defina um prazo para realização.</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="metas__botao botao" onclick="scrollToRegistrarNovaMeta()">Nova Meta +</button>
+        </div>
+        <div class="right-content">
+            <table id="metas-tabela" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome das Metas</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- as metas vão ser adicionadas aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="registrar-nova-meta" class="formulario__metas">
+        <h2>Registrar novo:</h2>
+        <form id="form-meta">
+            <div class="formulario__metas__grupo">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Título" required>
+            </div>
+            
+            <div class="formulario__metas__grupo">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" placeholder="Descrição" required></textarea>
+            </div>
+            
+            <div class="formulario__metas__grupo">
+                <label for="prazo">Prazo final:</label>
+                <input type="date" id="prazo" name="prazo" required>
+            </div>
+            
+            <div class="formulario__metas__grupo">
+                <label>Tipo da meta:</label>
+                <div class="radio-group">
+                    <input type="radio" id="curto-prazo" name="tipo-meta" value="Curto prazo" required>
+                    <label for="curto-prazo">Curto prazo</label>
+            
+                    <input type="radio" id="medio-prazo" name="tipo-meta" value="Médio prazo" required>
+                    <label for="medio-prazo">Médio prazo</label>
+            
+                    <input type="radio" id="longo-prazo" name="tipo-meta" value="Longo prazo" required>
+                    <label for="longo-prazo">Longo prazo</label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="botao" onclick="history.back()">Voltar</button>
+                <button type="submit" class="botao">Salvar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detalhesMetaModal" tabindex="-1" role="dialog" aria-labelledby="detalhesMetaModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detalhesMetaModalLabel">Detalhes da Meta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Título:</strong> <span id="modal-titulo"></span></p>
+                    <p><strong>Descrição:</strong> <span id="modal-descricao"></span></p>
+                    <p><strong>Prazo:</strong> <span id="modal-prazo"></span></p>
+                    <p><strong>Tipo da Meta:</strong> <span id="modal-tipo-meta"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+    <script>
+        function scrollToRegistrarNovaMeta() {
+            const element = document.getElementById("registrar-nova-meta");
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+
+        const metas = JSON.parse(localStorage.getItem("metas")) || [];
+
+        document.getElementById("form-meta").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const titulo = document.getElementById("titulo").value;
+            const descricao = document.getElementById("descricao").value;
+            const prazo = document.getElementById("prazo").value;
+            const tipoMeta = document.querySelector('input[name="tipo-meta"]:checked').value;
+
+            const novaMeta = {
+                titulo,
+                descricao,
+                prazo,
+                tipoMeta
+            };
+
+            metas.push(novaMeta);
+            localStorage.setItem("metas", JSON.stringify(metas));
+            atualizarTabela();
+
+            document.getElementById("form-meta").reset();
+        });
+
+        function atualizarTabela() {
+            const tabela = document.getElementById("metas-tabela").getElementsByTagName("tbody")[0];
+            tabela.innerHTML = "";
+
+            metas.forEach((meta, index) => {
+                const linha = tabela.insertRow();
+
+                const celulaTitulo = linha.insertCell(0);
+                celulaTitulo.textContent = meta.titulo;
+
+                const celulaPrazo = linha.insertCell(1);
+                celulaPrazo.textContent = meta.prazo;
+
+                const celulaAcoes = linha.insertCell(2);
+                const botaoAbrir = document.createElement("button");
+                botaoAbrir.className = "metas__botao botao abrir__botao";
+                botaoAbrir.textContent = "Abrir";
+                botaoAbrir.addEventListener("click", () => mostrarDetalhesMeta(index));
+                celulaAcoes.appendChild(botaoAbrir);
+            });
+        }
+
+        function mostrarDetalhesMeta(index) {
+            const meta = metas[index];
+            document.getElementById("modal-titulo").textContent = meta.titulo;
+            document.getElementById("modal-descricao").textContent = meta.descricao;
+            document.getElementById("modal-prazo").textContent = meta.prazo;
+            document.getElementById("modal-tipo-meta").textContent = meta.tipoMeta;
+            $('#detalhesMetaModal').modal('show');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var lampadaIcon = document.getElementById('lampadaIcon');
+            var tooltipText = document.getElementById('tooltipText');
+
+            lampadaIcon.addEventListener('mouseover', function () {
+                tooltipText.style.display = 'block';
+            });
+
+            lampadaIcon.addEventListener('mouseout', function () {
+                tooltipText.style.display = 'none';
+            });
+
+            atualizarTabela();
+        });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>

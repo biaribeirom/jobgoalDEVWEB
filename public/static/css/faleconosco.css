@@ -1,0 +1,22 @@
+.paragrafo__fale-conosco{
+    font-size: 18px;
+    color: var(--cinza);
+}
+
+
+.form-label{
+    color: var(--cinza);
+    font-size: 15px;
+}
+
+.mb-2{
+    color: var(--cinza);
+}
+
+body .titulo__fale-conosco{
+    color: var(--azul-escuro) !important;
+
+}
+
+
+

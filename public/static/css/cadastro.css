@@ -1,0 +1,147 @@
+.cadastro{
+    padding:20px;
+    width: 90%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25%;  
+}
+
+.logo__site{
+    width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.formulario{
+    width: 100%;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-size:16px;
+}
+
+.continue {
+    display: block;
+    text-align: center;
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 93%;
+}
+
+.google{
+    padding: 8px;
+    margin-top: 10px;
+    width: 99%;
+}
+
+.links{
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px){
+    .cadastro{
+        padding: 40px;
+        width: 70%;
+        max-width: 700px;
+        justify-content: center;
+        margin-left: 13%;
+        margin-top: 15%;;
+    } 
+    
+    .logo__site{
+        width: 70%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    label{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .continue{
+        padding: 15px;
+        width: 93%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .google{
+        padding: 15px;
+        margin-top: 20px;
+        width: 96%;
+        font-size: 18px;
+    }
+
+    .links{
+        font-size: 40px;
+    }
+
+    .rodape__simples{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1638px){
+    .cadastro{
+        padding: 60px;
+        width: 80%;
+        max-width: 2000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 6%;
+
+    }
+
+    .logo__site{
+        width: 50%;
+        margin-bottom: 40px;
+    }
+
+    .formulario{
+        width: 100%;
+
+    }
+
+    label {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .continue{
+        padding: 20px;
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .ou{
+        font-size: 25px;
+    }
+
+    .google{
+        padding: 20px;
+        margin-top: 30px;
+        width: 102.5%;
+        font-size: 30px;
+    }
+
+    .google img{
+        width: 30px;
+        height: auto;
+    }
+
+    .links a{
+        font-size: 30px;
+    }
+
+}

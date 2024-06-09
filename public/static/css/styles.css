@@ -1,0 +1,36 @@
+@import url("reset.css");
+@import url("header.css");
+@import url("banner.css");
+@import url("descricao.css");
+@import url("descricao.css");
+@import url("oferece.css");
+@import url("perguntas.css");
+@import url("clientes.css");
+@import url("carrossel.css");
+@import url("footer.css");
+@import url("sobrenos.css");
+@import url("login.css");
+@import url("cadastro.css");
+@import url("faleconosco.css");
+@import url("dashboard.css");
+@import url("metas.css");
+@import url("habilidades.css");
+
+:root {
+    --branco: #FFFFFF;
+    --azul: #444BF0;
+    --azul-claro: #7175ea;
+    --azul-escuro: #002f52;
+    --cinza: #5E5A5A;
+    --preto: #000000;
+    --fonte: "Nunito", sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+    font-family: var(--fonte);
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 0;
+
+}

@@ -1,0 +1,311 @@
+/* Arquivo: metas.css */
+
+body, html {
+    font-family: var(--fonte) !important;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.left-content, .right-content {
+    width: 48%;
+}
+
+.metas__container {
+    text-align: center;
+    position: relative; /* Necessário para a tooltip */
+    font-family: var(--fonte);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.metas__icone {
+    width: 5%;
+    height: auto;
+    cursor: pointer; /* Muda o cursor para pointer */
+}
+
+.tooltip {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1; /* Garante que a tooltip fique acima de outros elementos */
+    width: 200px; /* Largura da tooltip */
+    transition: opacity 0.3s ease; /* Adiciona transição suave */
+    opacity: 0;
+    pointer-events: none; /* Garante que a tooltip não interfira na interação do mouse */
+}
+
+.metas__icone:hover + .tooltip {
+    display: block; /* Mostra a tooltip ao passar o mouse no ícone */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.metas__botao {
+    margin-top: 10px;
+    text-align: center;
+    height: auto;
+    font-family: var(--fonte);
+    align-self: center; /* Garante que o botão esteja centrado */
+    border: none;
+    padding: 0.5em 1em;
+}
+
+.abrir__botao{
+    width: 50%;
+    height: auto;
+    padding: 0.5em 0.5em;
+    font-size: 15px;
+}
+
+.table-striped {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table-striped th, .table-striped td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.table-striped th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.progress {
+    height: 4px;
+}
+
+.progress-bar {
+    height: 100%;
+}
+
+.formulario__metas {
+    background-color: #fff;
+    padding: 1em; /* Diminuir o padding */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2em auto; /* Centraliza o formulário horizontalmente */
+    width: 90%;
+    max-width: 900px; /* Diminuir a largura máxima */
+}
+
+.formulario__metas h2 {
+    font-size: 1.2em; /* Diminuir o tamanho da fonte */
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.formulario__metas__grupo {
+    margin-bottom: 1em; /* Diminuir o espaçamento entre os grupos */
+}
+
+.formulario__metas__grupo label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 0.9em; /* Diminuir o tamanho da fonte */
+}
+
+.formulario__metas__grupo input[type="text"],
+.formulario__metas__grupo textarea {
+    width: 100%; 
+    padding: 0.4em; /* Diminuir o padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em; /* Diminuir o tamanho da fonte */
+}
+
+.formulario__metas__grupo input[type="radio"] {
+    margin-right: 0.5em;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row; /* Alinha os itens em uma linha */
+    gap: 1em; /* Espaçamento entre os botões de rádio */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+}
+
+.radio-group label {
+    margin-right: 0.5em;
+    font-size: 0.9em; /* Diminuir o tamanho da fonte */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.form-actions button {
+    padding: 0.4em 0.6em; /* Diminuir o padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em; /* Diminuir o tamanho da fonte */
+}
+
+body {
+    margin-top: 20px;
+    background: #eee;
+}
+
+.box.box-aqua {
+    border-top-color: #00c0ef !important;
+}
+
+.box.box-green {
+    border-top-color: #00a65a !important;
+}
+
+.box.box-success {
+    border-top-color: #3c8dbc;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+.box-header>.ion {
+    margin-right: 5px;
+}
+
+.box-header .box-title {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1;
+}
+
+.box-header>.box-tools {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.inline {
+    display: inline;
+}
+
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+}
+
+.todo-list>li {
+    border-radius: 2px;
+    padding: 10px;
+    background: #f4f4f4;
+    margin-bottom: 2px;
+    border-left: 2px solid #e6e7e8;
+    color: #444;
+}
+
+.todo-list>li .label {
+    margin-left: 10px;
+    font-size: 9px;
+}
+
+.todo-list>li .tools {
+    display: none;
+    float: right;
+    color: #dd4b39;
+}
+
+.todo-list>li:hover .tools {
+    display: block;  
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.btn-default {
+    background-color: #f4f4f4;
+    color: #444;
+    border-color: #ddd;
+}
+
+.btn {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-content, .right-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .formulario__metas {
+        margin-left: 5%;
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .table-striped th, .table-striped td {
+        font-size: 0.9em;
+    }
+
+    .metas__icone {
+        width: 10%; /* Ajuste o tamanho do ícone se necessário */
+    }
+}

@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+}
+.login {
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.logo__site{
+    width: 70%;
+    height: auto;
+}
+
+.logo__google{
+    width: 20px;
+    height: auto;;
+}
+
+.google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--preto);
+    border: 0.01px solid var(--preto);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: var(--branco);
+}
+
+.google img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.google:hover{
+    background-color:#e1e1e1;
+}
+
+.entrar{
+    width: 40%;
+    font-size: 16px;
+    background-color: var(--azul);
+    border: none;
+    color: var(--branco);
+    margin-top: 20px;
+    margin-left: 95px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.entrar:hover{
+    background-color: var(--azul-claro);
+
+}
+
+.ou {
+    text-align: center;
+    font-size: 14px;
+}
+
+.links a {
+    color: var(--cinza);
+    padding: 10px;
+    font-size: 14px;
+}
+
+.formulario {
+    width: 100%;
+}
+
+input[type="email"], input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: bor;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.mostra__senha {
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin-top: -40px;
+    margin-right: 10px;
+}
+
+.mostra__senha img {
+    width: 24px;
+}
+
+.rodape__simples {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.rodape p {
+    margin: 0;
+}
+
+@media screen and (min-width: 1024px){
+    .login{
+        padding: 40px;
+        width: 50%;
+        max-width: 600px;
+        margin-top: 30px;
+    }
+
+    .logo__site{
+        width: 50px;
+    }
+
+    .logo__google{
+        width: 30px;
+    }
+
+    .google{
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+
+    .entrar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    input[type="email"], input[type="password"]{
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .mostra__senha img {
+        width: 28px;
+        margin-right: 10px;
+
+    }
+
+    .ou, .links label{
+        font-size: 16px;
+    }
+    
+    .links{
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .login {
+        padding: 80px; 
+        width: 60%; 
+        max-width: 1000px; 
+        margin-top: 200px; 
+    }
+
+    .logo__site {
+        width: 50%; 
+    }
+
+    .logo__google {
+        width: 40px;
+    }
+
+    .google {
+        padding: 25px; 
+        font-size: 25px; 
+        width: 100%;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .entrar {
+        width: 100%;
+        padding: 20px; 
+        font-size: 20px;
+    }
+
+    input[type="email"], input[type="password"] {
+        padding: 20px; 
+        font-size: 24px;
+        width: 100%;
+
+    }
+
+    .mostra__senha img {
+        width: 35px;
+        height: auto;
+    }
+
+    .ou, .links label {
+        font-size: 20px; 
+    }
+
+    .rodape__simples {
+        padding: 25px; 
+        font-size: 20px;
+    }
+}
