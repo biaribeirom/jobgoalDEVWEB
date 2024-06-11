@@ -1,22 +1,26 @@
-.paragrafo__fale-conosco{
+.paragrafo__fale-conosco {
     font-size: 18px;
     color: var(--cinza);
+    text-align: left; /* Alinhar o texto à esquerda */
 }
 
-
-.form-label{
+.form-label {
     color: var(--cinza);
     font-size: 15px;
+    text-align: left; /* Alinhar o texto à esquerda */
 }
 
-.mb-2{
+.mb-2 {
     color: var(--cinza);
+    text-align: left; /* Alinhar o texto à esquerda */
 }
 
-body .titulo__fale-conosco{
+body .titulo__fale-conosco {
     color: var(--azul-escuro) !important;
-
+    text-align: left; /* Alinhar o texto à esquerda */
 }
 
-
-
+body {
+    align-items: baseline;
+    justify-content: flex-start; /* Ajustar a justificação para a esquerda */
+}

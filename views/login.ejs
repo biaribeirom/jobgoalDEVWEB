@@ -18,12 +18,6 @@
 </style>
 <body>
     <div class="login">
-        <img src="static/imagens/logo.png" alt="logo JobGoal" class="logo__site">
-        <button onclick="window.location.href='https:/accounts.google.com/signin';" class="google">
-            <img src="static/imagens/pesquisa.png" alt="logo do Google" class="logo__google">
-            Fazer login com o Google
-        </button>
-        <p class="ou">ou</p>
         <form action="/submit" method="post" class="formulario" onsubmit="return validaFormulario()">
 
             <label for="email">E-mail</label>
@@ -31,9 +25,7 @@
 
             <label for="password">Senha</label><br>
             <input type="password" id="senha" name="senha" class="input-senha" placeholder="Insira sua senha" required>
-            <span class="mostra__senha" onclick="mostraSenha();">
-                <img src="static/imagens/senha.png">
-            </span>
+           
 
             <button type="submit" class="entrar">Entrar</button>
 
@@ -42,11 +34,6 @@
     </div>
 
     <script>
-        function mostraSenha() {
-            var senhaInput = document.getElementById('senha');
-            var senhaTipo = senhaInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            senhaInput.setAttribute('type', senhaTipo);
-        }
 
         function validaFormulario() {
             var email = document.getElementById('email').value;

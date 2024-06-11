@@ -52,6 +52,10 @@ app.get('/dashboard', (req, res) => {
     res.render('dashboard');
 })
 
+app.get('/navbar', (req, res) => {
+    res.render('navbar');
+})
+
 // Iniciar o servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
