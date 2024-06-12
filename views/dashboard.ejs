@@ -13,365 +13,199 @@
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="static/css/dashboard.css">
 </head>
+
+<style>
+    body{margin-top:20px;}
+.card-style1 {
+    box-shadow: 0px 0px 10px 0px rgb(89 75 128 / 9%);
+}
+.border-0 {
+    border: 0!important;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+section {
+    padding: 120px 0;
+    overflow: hidden;
+    background: #fff;
+}
+.mb-2-3, .my-2-3 {
+    margin-bottom: 2.3rem;
+}
+
+.section-title {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.text-primary {
+    color: #444BF0 !important;
+}
+.text-secondary {
+    color: #7175ea !important;
+}
+.font-weight-600 {
+    font-weight: 600;
+}
+.display-26 {
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 992px){
+    .p-lg-7 {
+        padding: 4rem;
+    }
+}
+@media screen and (min-width: 768px){
+    .p-md-6 {
+        padding: 3.5rem;
+    }
+}
+@media screen and (min-width: 576px){
+    .p-sm-2-3 {
+        padding: 2.3rem;
+    }
+}
+.p-1-9 {
+    padding: 1.9rem;
+}
+
+.bg-secondary {
+    background: #15395A !important;
+}
+@media screen and (min-width: 576px){
+    .pe-sm-6, .px-sm-6 {
+        padding-right: 3.5rem;
+    }
+}
+@media screen and (min-width: 576px){
+    .ps-sm-6, .px-sm-6 {
+        padding-left: 3.5rem;
+    }
+}
+.pe-1-9, .px-1-9 {
+    padding-right: 1.9rem;
+}
+.ps-1-9, .px-1-9 {
+    padding-left: 1.9rem;
+}
+.pb-1-9, .py-1-9 {
+    padding-bottom: 1.9rem;
+}
+.pt-1-9, .py-1-9 {
+    padding-top: 1.9rem;
+}
+.mb-1-9, .my-1-9 {
+    margin-bottom: 1.9rem;
+}
+@media (min-width: 992px){
+    .d-lg-inline-block {
+        display: inline-block!important;
+    }
+}
+.rounded {
+    border-radius: 0.25rem!important;
+}
+</style>
 <body>
     <header class="cabecalho">
         <%- include('partials/navbar') %>
     </header>
     
-    <section class="introducao__dashboard text-center py-5">
-        <div class="container__dashboard">
-            <h1 class="titulo__dashboard">Bem-Vindo!</h1>
-            <p class="texto__dashboard">Monitore seu progresso, conquiste objetivos e amplie suas competências.</p>
+    <section class="introducao__dashboard text-center py-5" style="background-color: #444BF0;">
+        <div class="container__dashboard" style="background-color: #444BF0; color: white ">
+            <h1 class="titulo__dashboard" style="background-color: #444BF0; color: white ">Bem-Vindo!</h1>
+            <p class="texto__dashboard" style="background-color: #444BF0; color: white ;">Monitore seu progresso, conquiste objetivos e amplie suas competências.</p>
         </div>
     </section>
-
-    <div class="container flex-grow-1">
-        <div class="main-body">
-            <div class="row gutters-sm">
-                <div class="col-md-4">
-                    <div class="card custom-card">
-                        <div class="card-body">
-                            <div class="d-flex flex-column align-items-center text-center">
-                                <img src="/static/imagens/felipe.jpg" alt="Admin" class="rounded-circle" style="width: 90px; height: 75px;">
-                                <div class="mt-2">
-                                    <h2 style="font-size: large;">Felipe Moura</h2><br>
-                                    <p class="text-secondary mb-1" style="font-size: small;">Desenvolvedor de Software</p>
-                                    <p class="text-muted font-size-sm" style="font-size: small;">São Paulo, SP</p>
+    <section class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mb-4 mb-sm-5"><br><br>
+                    <div class="card card-style1 border-0">
+                        <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 mb-4 mb-lg-0">
+                                    <img src="/static/imagens/felipe.jpg" alt="Felipe" style="height: 200px; width: 200px;">
+                                </div>
+                                <div class="col-lg-6 px-xl-10">
+                                    <ul class="list-unstyled mb-1-9">
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-1 font-weight-200">Cargo:</span> Desenvolvedor Web</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-200">Experiencia:</span> 5 anos</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-200">Email:</span> felipem@gmail.com</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-200">Localização:</span>São Paulo</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-200">Telefone:</span>+55 (11) 99816-9029</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card mt-3 custom-card">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                    </svg>
-                                    Github
-                                </h6>
-                                <span class="text-secondary">FelipeM</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter mr-2 icon-inline text-info">
-                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                                    </svg>
-                                    Twitter
-                                </h6>
-                                <span class="text-secondary">@femoura</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram mr-2 icon-inline text-danger">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                    </svg>
-                                    Instagram
-                                </h6>
-                                <span class="text-secondary">femoura</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 class="mb-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin mr-2 icon-inline text-primary">
-                                        <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
-                                        <circle cx="4" cy="4" r="2"></circle>
-                                    </svg>
-                                    LinkedIn
-                                </h6>
-                                <span class="text-secondary">femoura</span>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="card mb-3 custom-card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Nome Completo</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    Felipe Moura
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Email</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    felipem@gmail.com
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Celular</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    +55 (11) 99816-9029
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Endereço</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    Faria Lima, São Paulo, SP
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <a class="btn btn-info full-width" target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Editar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                  
-            </div>
-        </div
-    
-                  <div class="row gutters-sm">
-                    <div class="col-sm-6 mb-3">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <i class="d-flex align-items-center mb-3 material-icons text-info mr-2">Habilidades</i>
-                          <small>Usabilidade</small>
-                          <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <small>Python</small>
-                          <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <small>Scrum</small>
-                          <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <small>Kanban</small>
-                          <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <small>Java</small>
-                          <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-    
+                <div class="col-lg-12 mb-4 mb-sm-5">
                 </div>
-              </div>
-    
-            </div>
-        </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row justify-content-center mt-4 pt-3">
-                            <div class="col-xl-10">
-                                <ul class="timeline mb-0">
-                                    <li>
-                                        <div class="date bg-light">
-                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="event-content">
-                                                    <div class="timeline-date bg-primary text-center rounded float-end">
-                                                        <h3 class="text-white mb-0 fs-17">15</h3>
-                                                        <p class="mb-0 text-white-50">Mar</p>
-                                                    </div>
-                                                    <div class="timeline-text">
-                                                        <h3 class="fs-17">Concluído Curso de HTML e CSS</h3>
-                                                        <p class="mb-0 mt-2 pt-1 text-muted">Concluiu com sucesso um curso avançado de HTML e CSS, aprimorando habilidades em desenvolvimento e design web.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-    
-                                    <li>
-                                        <div class="date bg-light">
-                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="event-content">
-                                                    <div class="timeline-date bg-primary text-center rounded float-end">
-                                                        <h3 class="text-white mb-0 fs-17">20</h3>
-                                                        <p class="mb-0 text-white-50">Abr</p>
-                                                    </div>
-                                                    <div class="timeline-text">
-                                                        <h3 class="fs-17">Iniciado Projeto em JavaScript</h3>
-                                                        <p class="mb-0 mt-2 pt-1 text-muted">Iniciou um projeto pessoal para criar uma aplicação web dinâmica e interativa usando JavaScript.</p>
-                                                        <div class="d-flex flex-wrap align-items-start event-img mt-3 gap-2">
-                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-fluid rounded" width="60">
-                                                            <img src="assets/images/small/img-5.jpg" alt="" class="img-fluid rounded" width="60">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-    
-                                    <li>
-                                        <div class="date bg-light">
-                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="event-content">
-                                                    <div class="timeline-date bg-primary text-center rounded float-end">
-                                                        <h3 class="text-white mb-0 fs-17">10</h3>
-                                                        <p class="mb-0 text-white-50">Jun</p>
-                                                    </div>
-                                                    <div class="timeline-text">
-                                                        <h3 class="fs-17">Participou de Workshop de Desenvolvimento Web</h3>
-                                                        <p class="mb-0 mt-2 pt-1 text-muted">Participou de um workshop focado nas últimas tendências em desenvolvimento web e melhores práticas em codificação.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-    
-                                    <li>
-                                        <div class="date bg-light">
-                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="event-content">
-                                                    <div class="timeline-date bg-primary text-center rounded float-end">
-                                                        <h3 class="text-white mb-0 fs-17">05</h3>
-                                                        <p class="mb-0 text-white-50">Jul</p>
-                                                    </div>
-                                                    <div class="timeline-text">
-                                                        <h3 class="fs-17">Aprendeu React.js</h3>
-                                                        <p class="mb-0 mt-2 pt-1 text-muted">Concluiu um curso de React.js, adquirindo conhecimento em construir interfaces de usuário dinâmicas para aplicações web.</p>
-    
-                                                    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-    
-                                    <li>
-                                        <div class="date bg-light">
-                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="event-content">
-                                                    <div class="timeline-date bg-primary text-center rounded float-end">
-                                                        <h3 class="text-white mb-0 fs-17">20</h3>
-                                                        <p class="mb-0 text-white-50">Ago</p>
-                                                    </div>
-                                                    <div class="timeline-text">
-                                                        <h3 class="fs-17">Desenvolveu Portfólio Pessoal</h3>
-    
-                                                        <p class="mb-0 mt-2 pt-1 text-muted">Criou um site de portfólio pessoal exibindo projetos e habilidades adquiridos ao longo do último ano.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-    
-                                    <li>
-                                        <div class="date bg-light">
-                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="event-content">
-                                                    <div class="timeline-date bg-primary text-center rounded float-end">
-                                                        <h3 class="text-white mb-0 fs-17">15</h3>
-                                                        <p class="mb-0 text-white-50">Set</p>
-                                                    </div>
-                                                    <div class="timeline-text">
-                                                        <h3 class="fs-17">Aprendeu Node.js</h3>
-    
-                                                        <p class="mb-0 mt-2 pt-1 text-muted">Estudou e praticou Node.js para construir aplicações backend e aprimorar habilidades em desenvolvimento server-side.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="date bg-light">
-                                            <h5 class="text-uppercase mb-0 fs-16">Ano 2023</h5>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="event-content">
-                                                    <div class="timeline-date bg-primary text-center rounded float-end">
-                                                        <h3 class="text-white mb-0 fs-17">30</h3>
-                                                        <p class="mb-0 text-white-50">Nov</p>
-                                                    </div>
-                                                    <div class="timeline-text">
-                                                        <h3 class="fs-17">Concluiu Bootcamp de Desenvolvimento Full-Stack</h3>
-    
-                                                        <p class="mb-0 mt-2 pt-1 text-muted">Finalizou com sucesso um bootcamp intensivo de desenvolvimento full-stack, ganhando expertise em tecnologias frontend e backend.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 mb-4 mb-sm-5">
+                            <div class="mb-4 mb-sm-5">
+                                <span class="section-title text-primary mb-3 mb-sm-4">Progresso das aulas</span>
+                                <div class="progress-text">
+                                    <div class="row">
+                                        <div class="col-6">Python</div>
+                                        <div class="col-6 text-end">80%</div>
+                                    </div>
+                                </div>
+                                <div class="custom-progress progress progress-medium mb-3" style="height: 4px;">
+                                    <div class="animated custom-bar progress-bar slideInLeft bg-secondary" style="width:80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <div class="row">
+                                        <div class="col-6">Métodos Ágeis </div>
+                                        <div class="col-6 text-end">90%</div>
+                                    </div>
+                                </div>
+                                <div class="custom-progress progress progress-medium mb-3" style="height: 4px;">
+                                    <div class="animated custom-bar progress-bar slideInLeft bg-secondary" style="width:90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <div class="row">
+                                        <div class="col-6">Desenvolvimento Web</div>
+                                        <div class="col-6 text-end">96%</div>
+                                    </div>
+                                </div>
+                                <div class="custom-progress progress progress-medium mb-3" style="height: 4px;">
+                                    <div class="animated custom-bar progress-bar slideInLeft bg-secondary" style="width:50%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <div class="row">
+                                        <div class="col-6">UX</div>
+                                        <div class="col-6 text-end">60%</div>
+                                    </div>
+                                </div>
+                                <div class="custom-progress progress progress-medium" style="height: 4px;">
+                                    <div class="animated custom-bar progress-bar slideInLeft bg-secondary" style="width:60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <section class="indicacoes">
-        <h2 class="texto__indicacoes">Explore nossa curadoria de cursos e recursos selecionados especialmente para fortalecer suas habilidades e acelerar seu crescimento profissional.</h2>
-        <ul class="lista__indicacoes">
-            <li class="lista__item__indicacoes">
-                <img src="/static/imagens/educacao 1.png" alt="ícone de curso" class="icones__indicacoes">
-                <h3 class="titulo__indicacoes"> Cursos Online</h3>
-                <a class="nomes__indicacoes" href="https://www.coursera.org/">Coursera</a>
-                <a class="nomes__indicacoes" href="https://www.udemy.com/">Udemy</a>
-                <a class="nomes__indicacoes" href="https://learning.linkedin.com/">LinkedIn Learning</a>
-            </li>
-            <li class="lista__item__indicacoes">
-                <img src="/static/imagens/artigo 1.png" alt="ícone de artigos" class="icones__indicacoes">
-                <h3 class="titulo__indicacoes">Artigos</h3>
-                <a class="nomes__indicacoes" href="https://medium.com/">Medium</a>
-                <a class="nomes__indicacoes" href="https://hbr.org/">Harvard Business Review</a>
-            </li>
-            <li class="lista__item__indicacoes">
-                <img src="/static/imagens/botao-play 1.png" alt="ícone de video" class="icones__indicacoes">
-                <h3 class="titulo__indicacoes"> Vídeos </h3>
-                <a class="nomes__indicacoes" href="https://www.ted.com/">TED talks</a>
-                <a class="nomes__indicacoes" href="https://pt.khanacademy.org/">Khan Academy</a>
-            </li>
-            <li class="lista__item__indicacoes">
-                <img src="/static/imagens/palestra 1.png" alt="ícone de workshops" class="icones__indicacoes">
-                <h3 class="titulo__indicacoes"> Workshops </h3>
-                <a class="nomes__indicacoes" href="https://www.ted.com/">teste</a>
-                <a class="nomes__indicacoes" href="https://www.meetup.com/pt-BR/">Meetup</a>
-            </li>
-        </ul>
     </section>
-    <section>
-        <%- include('partials/footer') %>
-    </section>
-
-    <!-- Inclua os scripts do Bootstrap -->
+    <%- include('partials/footer') %>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    
 </body>
 </html>
