@@ -20,32 +20,44 @@
     border: 2px solid var(--azul);
     border-radius: 5px;
     padding: 1em;
-    width: 30%;
+    width: 80%; /* Ajustado para telas menores */
     color: var(--azul);
     display: inline-block;
     text-decoration: none;
-    margin-right: 10px;
+    margin: 10px 0; /* Ajustado para espaçamento */
 }
 
-.banner__botao:hover{
+.banner__botao:hover {
     background-color: var(--azul);
     color: var(--branco);
     cursor: pointer;
 }
 
-@media screen and (min-width: 1024px){
-    .banner__titulo{
+@media screen and (min-width: 480px) {
+    .banner__botao {
+        width: 60%; /* Ajustado para telas pequenas */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner__botao {
+        width: 40%; /* Ajustado para tablets e telas médias */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo {
         font-size: 38px;
     }
 
-    .banner__texto{
+    .banner__texto {
         font-size: 31px;
     }
 
-    .banner__botao{
+    .banner__botao {
         font-size: 19px;
-        padding: 20px 40px;
-        width: 15%;
+        padding: 15px 30px; /* Reduzido para telas maiores */
+        width: 20%; /* Reduzido para telas maiores */
         margin: 1em;
     }
 }
@@ -55,7 +67,7 @@
         padding: 6em 0;
     }
 
-    .banner__titulo{
+    .banner__titulo {
         font-size: 53px;
     }
 
@@ -64,9 +76,9 @@
     }
 
     .banner__botao {
-        font-size: 27px;
-        padding: 30px 50px;
-        width: 20%;
+        font-size: 20px; /* Reduzido um pouco mais para telas maiores */
+        padding: 20px 35px; /* Reduzido para telas maiores */
+        width: 15%; /* Reduzido para telas maiores */
         margin: 1.5em;
     }
 }

@@ -12,7 +12,7 @@
     <%- include('partials/navbar') %>
 </header>
 <style>
-        .opcoes__item{
+    .opcoes__item{
         font-weight: 400;
     }
 </style>
@@ -26,15 +26,11 @@
             <label for="password">Senha</label><br>
             <input type="password" id="senha" name="senha" class="input-senha" placeholder="Insira sua senha" required>
            
-
             <button type="submit" class="entrar">Entrar</button>
-
         </form>
-
     </div>
 
     <script>
-
         function validaFormulario() {
             var email = document.getElementById('email').value;
             var senha = document.getElementById('senha').value;
@@ -52,7 +48,9 @@
                 return false;
             }
 
-            return true;
+            // Redireciona para a página de metas após validação bem-sucedida
+            window.location.href = "/metas";
+            return false; // Previne a submissão do formulário para que o redirecionamento funcione
         }
     </script>
 
